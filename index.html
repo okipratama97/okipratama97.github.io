@@ -10,7 +10,7 @@
 
     <header>
         <nav>
-            <p><a href="#">Header Thingy</a></p>
+            <p><a href="#">Simulasi Antrian Pasien</a></p>
         </nav>
     </header>
 
@@ -19,48 +19,49 @@
             <div class="card-holder">
                 <div class="card-boxes">
                     <div class="card card-dokter">
-                        <img id="dokter-1-photo" src="./img/hacktiv8.png">
-                        <h2 id="dokter-1-nama">Nama</h2>
-                        <h3 id="dokter-1-spesialis">Spesialis</h3>
-                        <h3 id="dokter-1-pasien">Pasien</h3>
+                        <img id="dokter-0-photo" src="./img/dok1.png">
+                        <div id="dokter-0">
+                            <h2 id="dokter-0-nama">Nama</h2>
+                            <h3 id="dokter-0-spesialis">Spesialis</h3>
+                            <h3 id="dokter-0-pasien">Pasien</h3>
+                        </div>
                     </div>
                 </div>
                 <div class="card-boxes">
                     <div class="card card-dokter">
-                        <img id="dokter-2-photo" src="./img/hacktiv8.png">
-                        <h2 id="dokter-2-nama">Nama</h2>
-                        <h3 id="dokter-2-spesialis">Spesialis</h3>
-                        <h3 id="dokter-2-pasien">Pasien</h3>
+                        <img id="dokter-1-photo" src="./img/dok2.png">
+                        <div id="dokter-1">
+                            <h2 id="dokter-1-nama">Nama</h2>
+                            <h3 id="dokter-1-spesialis">Spesialis</h3>
+                            <h3 id="dokter-1-pasien">Pasien</h3>
+                        </div>
                     </div>
                 </div>
                 <div class="card-boxes">
                     <div class="card card-dokter">
-                        <img id="dokter-3-photo" src="./img/hacktiv8.png">
-                        <h2 id="dokter-3-nama">Nama</h2>
-                        <h3 id="dokter-3-spesialis">Spesialis</h3>
-                        <h3 id="dokter-3-pasien">Pasien</h3>
+                        <img id="dokter-2-photo" src="./img/dok3.png">
+                        <div id="dokter-2">
+                            <h2 id="dokter-2-nama">Nama</h2>
+                            <h3 id="dokter-2-spesialis">Spesialis</h3>
+                            <h3 id="dokter-2-pasien">Pasien</h3>
+                        </div>
                     </div>
                 </div>
                 <div class="card-boxes clear">
                     <div class="card card-input-antrian">
                         <h2 class="card-title">Formulir Pendaftaran Pasien</h2>
-                        <form id="form-input-antrian">
-                            <label for="input-nama">Nama: </label>
-                            <input type="text" id="input-nama" required/>
-                            <label for="input-keluhan-list">Keluhan?</label>
-                            <select name="input-keluhan-list" id="input-keluhan-list">
-                              <option value="keluhan-1">Keluhan1</option>
-                              <option value="keluhan-2">Keluhan2</option>
-                              <option value="keluhan-3">Keluhan3</option>
-                            </select>
-                            <input type="button" value="Antri" id="button-antri">
-                        </form>
-                    </div>
-                </div>
-                <div class="card-boxes">
-                    <div class="card card-operator">
-                        <h2 class="masuk">Masuk</h2>
-                        <button class="button-masuk" id="button-masuk">Masuk</button>
+                        <div class="form">
+                            <form id="form-input-antrian">
+                                <label for="input-nama">Nama </label>
+                                <input type="text" id="input-nama" required/>
+                                <hr>
+                                <label for="input-keluhan-list">Keluhan</label>
+                                <select name="input-keluhan-list" id="input-keluhan-list">
+                                </select>
+                                <hr>
+                                <input type="button" value="Antri" id="button-antri">
+                            </form>
+                        </div>
                     </div>
                 </div>
                 <div class="card-boxes">
@@ -75,15 +76,21 @@
                                 </tr>
                             </thead>
                             <tbody class="table-antrian-body" id="table-antrian-body">
-                                <tr>
-                                    <td>1</td>
-                                    <td>NamaPasien</td>
-                                    <td>Keluhan</td>
-                                </tr>
                             </tbody>
                         </table>                      
                     </div>
                 </div>
+                <div class="card-boxes">
+                    <div class="card card-operator">
+                        <h2 class="masuk">Masuk</h2>
+                        <label for="input-dokter-list">Dokter</label>
+                        <select name="input-dokter-list" id="input-dokter-list">
+                        </select>
+                        <hr>
+                        <button class="button-masuk" id="button-masuk">Masuk</button>
+                    </div>
+                </div>
+                <div class="spacer" style="clear: both;"></div>
             </div>
         </section>
     </main>
@@ -95,4 +102,5 @@
     </footer>
 
 </body>
+<script src="./script/script.js"></script>
 </html>
