@@ -30,13 +30,19 @@ nav p a {
     color: black;
 }
 
-
-.cards-section {
-    background-color: red;
+hr {
+    border-top: 1px solid rgb(43, 41, 41);
+    width: 20%;
+    margin-top: 13px;
+    margin-bottom: 13px;
 }
 
+/* .cards-section {
+    background-color: red;
+} */
+
 .card-holder {
-    background-color: yellow;
+    /* background-color: yellow; */
     margin: 10px auto;
     padding: 10px;
     max-width: 1000px;
@@ -44,6 +50,7 @@ nav p a {
 
 .card-boxes {
     background-color: green;
+    box-shadow: 0 10px 6px -6px #777;
     float: left;
     margin: 10px;
     width: 300px;
@@ -52,12 +59,32 @@ nav p a {
 }
 .card {
     background-color: rgb(200, 219, 200);
-    margin: 0 auto;
+    margin: 5px auto;
+    padding: 3px;
     text-align: center;
 }
 
 .card-dokter img {
     height: 200px;
+    width: 150px;
+}
+
+.table-antrian, th, td {
+    border: 1px solid black;
+    margin: 2px auto;
+}
+
+.form {
+    margin: 3px auto;
+    width: 90%;
+    text-align: left;
+    padding-left: 10px;
+}
+
+#button-antri {
+    margin-left: 40%;
+    text-align: center;
+    /* font-size: 30px; */
 }
 
 .clear {
