@@ -1,0 +1,77 @@
+/* write your code here */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+nav {
+    background-color: cyan;
+    height: 60px;
+    padding-top: 5px;
+    margin-top: 0;
+    text-align: center;
+    box-shadow: 1px 1px 2px;
+}
+
+nav p {
+    font-family: 'Langar', cursive;
+    font-size: 38px;
+    margin: 0;
+    letter-spacing: 0.2em;
+}
+
+nav p a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.cards-section {
+    background-color: red;
+}
+
+.card-holder {
+    background-color: yellow;
+    margin: 10px auto;
+    padding: 10px;
+    max-width: 1000px;
+}
+
+.card-boxes {
+    background-color: green;
+    float: left;
+    margin: 10px;
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+}
+.card {
+    background-color: rgb(200, 219, 200);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card-dokter img {
+    height: 200px;
+}
+
+.clear {
+    clear: left;
+}
+
+footer {
+    bottom: 0;
+    position: absolute;
+    background-color: rgb(202, 202, 202);
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    padding-top: 10px;
+    display: none;
+}
+
