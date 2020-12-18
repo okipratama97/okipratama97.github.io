@@ -190,12 +190,17 @@ function tambahPanjangAntrian(num){
 }
 
 function updateStatusDokter(dokters, dok, pasienName){
-    console.log("REEEEEER")
     for (let i = 0; i < dokters.length; i++){
         if (dokters[i].nama === dok){
             let pasien = document.getElementById(`dokter-${i}-pasien`)
-            console.log("REEEEEEEE")
             pasien.innerHTML = pasienName
+            let kotak = pasien.parentElement.parentElement.parentElement
+            kotak.setAttribute("class", "card-boxes highlight")
+            setTimeout(function(){
+                kotak.setAttribute("class", "card-boxes")
+            },1000)
+            console.log("KOTAK")
+            console.log(kotak)
             return dok
         }
     }

@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Aplikasi dan Simulasi Antrian</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <title>Simulasi Antrian</title>
 </head>
 <body>
 
@@ -19,31 +21,37 @@
             <div class="card-holder">
                 <div class="card-boxes">
                     <div class="card card-dokter">
-                        <img id="dokter-0-photo" src="./img/dok1.png">
+                        <div class="card-dokter-img">
+                            <img id="dokter-0-photo" src="./img/dok1.png">
+                        </div>
                         <div id="dokter-0">
-                            <h2 id="dokter-0-nama">Nama</h2>
-                            <h3 id="dokter-0-spesialis">Spesialis</h3>
-                            <h3 id="dokter-0-pasien">Pasien</h3>
+                            <h2 class="dokter-nama" id="dokter-0-nama">Nama</h2>
+                            <h3 class="dokter-spesialis" id="dokter-0-spesialis">Spesialis</h3>
+                            <h3 class="dokter-pasien" id="dokter-0-pasien">Pasien</h3>
                         </div>
                     </div>
                 </div>
                 <div class="card-boxes">
                     <div class="card card-dokter">
-                        <img id="dokter-1-photo" src="./img/dok2.png">
+                        <div class="card-dokter-img">
+                            <img id="dokter-1-photo" src="./img/dok2.png">
+                        </div>
                         <div id="dokter-1">
-                            <h2 id="dokter-1-nama">Nama</h2>
-                            <h3 id="dokter-1-spesialis">Spesialis</h3>
-                            <h3 id="dokter-1-pasien">Pasien</h3>
+                            <h2 class="dokter-nama" id="dokter-1-nama">Nama</h2>
+                            <h3 class="dokter-spesialis" id="dokter-1-spesialis">Spesialis</h3>
+                            <h3 class="dokter-pasien" id="dokter-1-pasien">Pasien</h3>
                         </div>
                     </div>
                 </div>
                 <div class="card-boxes">
                     <div class="card card-dokter">
-                        <img id="dokter-2-photo" src="./img/dok3.png">
+                        <div class="card-dokter-img">
+                            <img id="dokter-2-photo" src="./img/dok3.png">
+                        </div>
                         <div id="dokter-2">
-                            <h2 id="dokter-2-nama">Nama</h2>
-                            <h3 id="dokter-2-spesialis">Spesialis</h3>
-                            <h3 id="dokter-2-pasien">Pasien</h3>
+                            <h2 class="dokter-nama" id="dokter-2-nama">Nama</h2>
+                            <h3 class="dokter-spesialis" id="dokter-2-spesialis">Spesialis</h3>
+                            <h3 class="dokter-pasien" id="dokter-2-pasien">Pasien</h3>
                         </div>
                     </div>
                 </div>
@@ -59,7 +67,8 @@
                                 <select name="input-keluhan-list" id="input-keluhan-list">
                                 </select>
                                 <hr>
-                                <input type="button" value="Antri" id="button-antri">
+                                <!-- <input type="button" value="Antri" id="button-antri"> -->
+                                <div id="button-antri" class="card-button"><span>Antri</span></div>
                             </form>
                         </div>
                     </div>
@@ -67,17 +76,20 @@
                 <div class="card-boxes">
                     <div class="card card-antrian">
                         <h2 class="card-title">Daftar Antrian</h2>
-                        <table class="table-antrian" id="table-antrian">
-                            <thead class="table-antrian-head" id="table-antrian-head">
-                                <tr>
-                                    <th>No.</th>
-                                    <th>Nama</th>
-                                    <th>Keluhan</th>
-                                </tr>
-                            </thead>
-                            <tbody class="table-antrian-body" id="table-antrian-body">
-                            </tbody>
-                        </table>                      
+                        <div class="tabel">
+                            <table class="table-antrian flat-table" id="table-antrian">
+                                <thead class="table-antrian-head" id="table-antrian-head">
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>Nama</th>
+                                        <th>Keluhan</th>
+                                    </tr>
+                                </thead>
+                                <div class="tabel-space"><div>
+                                <tbody class="table-antrian-body" id="table-antrian-body">
+                                </tbody>
+                            </table>
+                        </div>             
                     </div>
                 </div>
                 <div class="card-boxes">
@@ -87,16 +99,18 @@
                         <select name="input-dokter-list" id="input-dokter-list">
                         </select>
                         <hr>
-                        <button class="button-masuk" id="button-masuk">Masuk</button>
+                        <!-- <button class="button-masuk" id="button-masuk">Masuk</button> -->
+                        <div id="button-masuk" class="card-button"><span>Masuk</span></div>
                     </div>
                 </div>
                 <div class="spacer" style="clear: both;"></div>
             </div>
         </section>
+        <section id="content-wrapper"></section>
     </main>
 
     <footer>
-        <div>
+        <div class="credit">
             &#169; Oki Pratama - 2020
         </div>
     </footer>

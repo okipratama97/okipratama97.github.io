@@ -1,28 +1,39 @@
-/* write your code here */
+@sR: #418a95;
+@sRLight: #418a95 + #222;
+@sRDark: #418a95 - #222;
+@darkGrey:#6b6b6b;
+@offWhite:#f6f3f7;
+@bg:#f6f3f7 - #111;
+@darkBg:#f6f3f7 - #222;
 
 * {
     box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
 }
 
 body {
-    padding-top: 0;
-    margin-top: 0;
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrapper {
+    height: 40px;
 }
 
 nav {
-    background-color: cyan;
+    background-color: rgba(245, 245, 245, 0.555);
     height: 60px;
-    padding-top: 5px;
     margin-top: 0;
     text-align: center;
-    box-shadow: 1px 1px 2px;
+    border-bottom: 1px solid rgba(182, 182, 182, 0.171);
+    /* overflow: ; */
+    /* box-shadow: 1px 1px 2px; */
 }
 
 nav p {
-    font-family: 'Langar', cursive;
     font-size: 38px;
     margin: 0;
-    letter-spacing: 0.2em;
 }
 
 nav p a {
@@ -37,10 +48,6 @@ hr {
     margin-bottom: 13px;
 }
 
-/* .cards-section {
-    background-color: red;
-} */
-
 .card-holder {
     /* background-color: yellow; */
     margin: 10px auto;
@@ -49,30 +56,61 @@ hr {
 }
 
 .card-boxes {
-    background-color: green;
-    box-shadow: 0 10px 6px -6px #777;
+    background-color: white;
+    box-shadow: 0 7px 5px -5px #777;
+    border: 1px solid rgba(97, 97, 97, 0.24);
+    border-bottom: 3px solid rgb(182, 182, 182);
     float: left;
     margin: 10px;
     width: 300px;
     height: 400px;
     padding: 10px;
 }
+
+.highlight {
+    border: 1px solid rgba(14, 17, 196, 0.24);
+    border-bottom: 9px solid  rgba(14, 17, 196, 0.24);
+}
+
 .card {
-    background-color: rgb(200, 219, 200);
+    background-color: rgba(245, 245, 245, 0.205);
     margin: 5px auto;
     padding: 3px;
     text-align: center;
 }
 
+.card-dokter {
+    padding-top: 30px;
+}
+
+.card-dokter-img {
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
 .card-dokter img {
     height: 200px;
     width: 150px;
+    /* border-radius: 50%; */
 }
 
-.table-antrian, th, td {
+.dokter-nama {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.dokter-spesialis {
+    margin: 0;
+}
+
+
+/* .table-antrian, th, td {
     border: 1px solid black;
     margin: 2px auto;
-}
+} */
 
 .form {
     margin: 3px auto;
@@ -81,9 +119,100 @@ hr {
     padding-left: 10px;
 }
 
-#button-antri {
-    margin-left: 40%;
+.tabel {
+    overflow-y: auto;
+    max-height: 270px;
+    margin: 0 auto;
+    max-width: 80%;
+    position: relative;
+}
+
+.flat-table{  
+    width:100%;
+    border-collapse:collapse; 
+}
+
+thead tr {
+    height:30px;
+    background: rgba(128, 128, 128, 0.445);
+    border-bottom:rgba(0,0,0,.05) 1px solid;
+    width: 100%;
+    /* position: absolute; */
+}
+
+tbody tr {
+    height:30px;
+    background: rgba(128, 128, 128, 0.151);
+    border-bottom:rgba(0,0,0,.05) 1px solid;
+}
+
+td, th {    
+    box-sizing:border-box;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+
+::-webkit-scrollbar{
+	width: 10px;
+}
+
+::-webkit-scrollbar-track-piece{
+	background-color: #FFF;
+}
+
+::-webkit-scrollbar-thumb{
+	background-color: #CBCBCB;
+	outline: 2px solid #FFF;
+	outline-offset: -2px;
+	border: .1px solid #B7B7B7;
+}
+
+::-webkit-scrollbar-thumb:hover{
+	background-color: #909090;
+}
+
+/* #button-antri {
+    margin-left: 50%;
+    transform: translate(-50%, 0%)
+} */
+
+.card-button {
+    cursor: default;
     text-align: center;
+    height: 25px;
+    background-color: rgb(190, 190, 190);
+    width: 60px;
+    margin: 0 auto;
+    user-select:none;
+}
+
+.card-button:hover {
+    height: 35px;
+    /* padding-top: 5px; */
+    border-top: 5px solid rgb(46, 46, 46);
+    background-color: rgb(146, 145, 145);
+    width: 75px;
+    /* margin: 0 auto; */
+}
+
+.card-button:active {
+    height: 30px;
+    width: 75px;
+    /* padding-top: 0px; */
+    border-top: 0;
+    border-top: 2px solid rgb(0, 0, 0);
+    background-color:rgb(146, 145, 145);
+    width: 75px;
+    /* margin: 0 auto; */
+}
+
+#button-masuk {
+    /* margin-left: 50%;
+    transform: translate(-50%, 0%) */
+    /* left: 50%; */
+    /* margin-right: -50%; */
+    /* transform: translate(-50%, 0%) */
     /* font-size: 30px; */
 }
 
@@ -94,11 +223,18 @@ hr {
 footer {
     bottom: 0;
     position: absolute;
-    background-color: rgb(202, 202, 202);
+    background-color: rgba(202, 202, 202, 0);
     width: 100%;
-    height: 40px;
+    height: 2vh;
     text-align: center;
     padding-top: 10px;
+    background-image: url(../img/hospital-bg-hd-cut-bw.jpg);
+    background-repeat: no-repeat; /*Prevent showing multiple background images*/
+    box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4);
+    /* display: none; */
+}
+
+footer .credit {
     display: none;
 }
 
