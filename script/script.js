@@ -256,6 +256,10 @@ buttonForm.addEventListener("click", function(){
         alert("Masukan nama")
         return ""
     }
+    if (nama.length >= 15){
+        alert("Nama Invalid")
+        return ""
+    }
     tambahAntrian(antrian, nama, panjangAntrian, getDokter(dokters, keluhan), keluhan)
     panjangAntrian = tambahPanjangAntrian(panjangAntrian)
     tampilkanAntrian(antrian)
